@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -p G1Part_sce
+#SBATCH -o
+#SBATCH -e
+#SBATCH -N 1
+#SBATCH -c 1
+#SBATCH -t 28800
+#SBATCH -J hylin
+
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+mpirun -n 1 ./console/exe
